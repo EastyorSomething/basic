@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var data = "nothing"
+const PORT = process.env.PORT || 5000
 
  app.get('/', function(req, res){
   //res.sendFile(__d(irname+"/index.html");
@@ -13,6 +14,4 @@ var data = "nothing"
 	}
 });
 
-app.listen(3000, function(){
-	console.log("Server is running on 3000");	
-});
+app.listen().listen(PORT, () => console.log(`Listening on ${ PORT }`))
